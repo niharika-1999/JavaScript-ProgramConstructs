@@ -1,7 +1,16 @@
-var year=1999;
-if((year%4==0) && (year%100!=0)||(year%400==0)) {
-    console.log(year + ' is a leap year')
-    }else{
-        console.log(year + ' is not a leap year');
-    }
-    
+var year;
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+rl.question('Enter a year: ', (year) => {
+  //To check LeapYear or not
+if( ((year % 4 == 0) && (year%100!=0)) ||(year % 400 == 0) )
+    console.log(" Year " + year + " is a leap year.");
+else
+    console.log(" Year " + year + " is not a leap year.");
+  rl.close();
+});
